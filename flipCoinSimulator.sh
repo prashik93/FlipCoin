@@ -1,13 +1,25 @@
 #! /bin/bash/ -x
 
-flipCoin=$((RANDOM%2))
-
 isHead=1
 
-if [ $flipCoin -eq $isHead ]
-then
-	echo "Head is Winner"
+headCount=0
+tailCount=0
 
-else
-	echo "Tail is Winner"
-fi
+count=0
+while (( count < 10 ))
+do
+	flipCoin=$((RANDOM%2))
+
+	if [ $flipCoin -eq $isHead ]
+	then
+		echo "Head is Winner"
+		((headCount++))
+	else
+		echo "Tail is Winner"
+		((tailCount++))
+	fi
+	((count++))
+done
+
+echo "Head Won $headCount times."
+echo "Tail Won $tailCount times."
