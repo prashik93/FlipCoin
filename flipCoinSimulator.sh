@@ -3,8 +3,8 @@
 isHead=1
 isTail=0
 
-headWonTime=21
-tailWonTime=21
+headWonTime=0
+tailWonTime=0
 fixedWonTime=21
 
 tieHeadWonTime=0
